@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单管理</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 100px;
+            height: 20px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+            font-size: 15px;
+        }
+
+        .change {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .change>div {
+            width: 300px;
+            height: 300px;
+            padding: 30px 15px;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="add">
+        <p style="color: darkcyan; font-size: 10px;">新增</p>
+        <form id="addRecipeForm">
+            菜品名称: <input type="text" id="name" name="name"><br>
+            状态: <select id="status" name="status">
+                <option value="0">售空</option>
+                <option value="1">在售</option>
+            </select> <br>
+            类型: <input type="text" id="type" name="type"><br>
+            价格: <input type="text" id="price" name="price"><br>
+            <button type="button" onclick="addRecipe()">确定</button>
+            <button type="button" onclick="resetForm()">重置</button>
+        </form>
+    </div>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <td>序号</td>
+                <td>菜品名称</td>
+                <td>状态</td>
+                <td>类型</td>
+                <td>价格</td>
+                <td>删除</td>
+                <td>修改</td>
+            </tr>
+        </thead>
+        <tbody id="menuTableBody"></tbody>
+    </table>
+
+    <div class="change" id="editModal">
+        <div>
+            菜品名称: <input type="text" id="editName" name="name"><br>
+            状态: <select id="editStatus" name="status">
+                <option value="0">售空</option>
+                <option value="1">在售</option>
+            </select> <br>
+            类型: <input type="text" id="editType" name="type"><br>
+            价格: <input type="number" id="editPrice" name="price"><br>
+            <input type="hidden" id="editId">
+            <button onclick="updateRecipe()">确定</button>
+            <button onclick="hideEditForm()">取消</button>
+        </div>
+    </div>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/ManageMenu.js"></script>
+</body>
+    <a href="./admin">返回首页</a>
+</html>

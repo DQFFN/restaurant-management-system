@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>会员信息修改</title>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/ShowInfo.css">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/ShowInfo.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post" name="updateForm">
+            <table class="info-table">
+                <tr bgcolor="darkorange">
+                    <td colspan="2">
+                        <span class="info-heading">个人信息修改</span>
+                    </td>
+                </tr>
+                <!-- 设置该项为必填项 调用input中required方法-->
+                <tr>
+                    <td>
+                        <label for="name">姓名：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name" value="张三" readonly="readonly">
+                        <font color="red" size="+1">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="account">账号：</label>
+                    </td>
+                    <td>
+                        <input type="text" id="account" name="account" value="123456" readonly="readonly">
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="old_password">旧密码：</label>
+                    </td>
+                    <td>
+                        <input type="password" id="old_password" maxlength="11" name="old_password" required>
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="new_password">新密码：</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" maxlength="11" name="new_password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="confirm_password">确认密码：</label>
+                    </td>
+                    <td>
+                        <input type="password" id="confirm_password" maxlength="11" name="confirm_password" required>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="更新信息" class="action-button">
+        </form>
+        <div class="data-display">
+          <h1 class="title">账单历史统计</h1>
+          <div class="data-item">
+            <p class="data-label">下单次数</p>
+            <p id="order_count" class="data-value orange"></p>
+          </div>
+          <div class="data-item">
+            <p class="data-label">消费总额</p>
+            <p id="total_amount" class="data-value"></p>
+          </div>
+          <a href="./customers" class="back-to-home">返回主页</a>
+        </div>
+    </div>
+</body>
+</html>

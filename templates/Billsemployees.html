@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>账单管理</title>
+        <link rel="stylesheet" type="text/css" href="/static/CSS/Billsemployees.css">
+	</head>
+
+	<body>
+        <div class="container">
+            <div class="table-container">
+                <h2>待提交的订单</h2>
+                <table border="1px" class="table table-bordered" id="pending_orders_table">
+                    <tr>
+                        <th>编号</th>
+                        <th>时间</th>
+                        <th>接单员工</th>
+                        <th>顾客号</th>
+                        <th>账单金额</th>
+                        <th>评价</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h2>已提交的订单</h2>
+                <table border="1px" class="table table-bordered" id="submitted_orders_table">
+                    <tr>
+                        <th>编号</th>
+                        <th>时间</th>
+                        <th>接单员工</th>
+                        <th>顾客号</th>
+                        <th>账单金额</th>
+                        <th>评价</th>
+                    </tr>
+                </table>
+            </div>
+
+            <a href="./employees">返回主页</a>
+
+
+            <div class="overlay" id="popup">
+                <div class="popup">
+                    <h2>新增订单</h2>
+                    <input type="text" id="orderId" placeholder="编号">
+                    <input type="text" id="orderDate" placeholder="时间">
+                    <input type="text" id="orderEmployee" placeholder="接单员工">
+                    <input type="text" id="orderCustomer" placeholder="顾客号">
+                    <input type="text" id="orderAmount" placeholder="账单金额">
+                    <input type="text" id="orderFeedback" placeholder="评价">
+                    <button id="saveOrderButton">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="/static/js/jquery.js"></script>
+	    <script src="/static/js/Billsemployees.js"></script>
+	</body>
+</html>

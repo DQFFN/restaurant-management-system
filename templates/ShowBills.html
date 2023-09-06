@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>账单管理</title>
+        <link rel="stylesheet" type="text/css" href="/static/CSS/ShowBills.css">
+	</head>
+
+	<body>
+        <div class="container">
+            <div class="table-container">
+                <table border="1px" class="table table-bordered" id="table_page">
+                    <tr>
+                        <th>编号</th>
+                        <th>时间</th>
+                        <th>接单员工</th>
+                        <th>顾客号</th>
+                        <th>账单金额</th>
+                        <th>评价</th>
+                    </tr>
+
+                </table>
+            </div>
+
+            <h1 align="center">新增账单</h1>
+            <div class="form-container">
+                <form action="#" method="post">
+                    <p>
+                        顾客号
+                        <input type="number" name="customer_id">
+                        员工号
+                        <input type="number" name="employee_id">
+                    </p>
+                    <p>
+                        年
+                        <input type="number" name="year">
+                        月
+                        <input type="number" name="month">
+                        日
+                        <input type="number" name="day">
+                    </p>
+                    <p>消费总额 <input type="number" name="totalMY"></p>
+                    <p>
+                        评价
+                        <input type="text" list="feedback" name="feedback" style="padding:0.2em;border-radius:2px;">
+                        <datalist id="feedback">
+                            <option>满意</option>
+                            <option>基本满意</option>
+                            <option>一般</option>
+                            <option>差</option>
+                        </datalist>
+                    </p>
+                    <input type="submit" value="提交">
+                    <input type="reset" value="重置">
+                </form>
+            </div>
+        </div>
+
+        <a href="./admin">返回主页</a>
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/ShowBills.js"></script>
+	</body>
+</html>

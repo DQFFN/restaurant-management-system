@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>会员信息修改</title>
+	<link rel="stylesheet" type="text/css" href="/static/CSS/Showadmin.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="form-container">
+			<h1>个人信息修改</h1>
+			<form id="updateForm">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr bgcolor="darkorange">
+						<td>
+							<font color="white">个人信息修改</font>
+						</td>
+					</tr>
+					<!-- 设置该项为必填项 调用input中required方法-->
+					<tr>
+						<td>
+							<label for="name">姓名：</label>
+							<input type="text" id="name" name="name" value="qaq" readonly>
+							<font color="red" size="+1">*</font>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="post">职位：</label>
+							<input type="text" id="post" name="post" value="店员" readonly>
+							<font color="red" size="+1">*</font>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="account">账号：</label>
+							<input type="text" id="account" name="account" value="wangxm" readonly>
+							<font color="red">*</font>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="old_password">旧密码：</label>
+							<input type="password" id="old_password" maxlength="11" name="old_password" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="new_password">新密码：</label>
+							<input type="password" id="new_password" maxlength="11" name="new_password" required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="confirm_password">确认密码：</label>
+							<input type="password" id="confirm_password" maxlength="11" name="confirm_password" required>
+						</td>
+					</tr>
+				</table>
+				<div class="button-group">
+					<input type="submit" value="确认修改" name="submit">
+					<input type="reset" value="重置" name="reset">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<h1 class="title">工资明细</h1>
+	<div class="salary-details">
+		<p>
+          基础工资
+          <input type="text" name="base_salary" id="base_salary" readonly="readonly">
+        </p>
+        <p>
+          完成单数
+          <input type="text" name="completed_count" id="completed_count" readonly="readonly">
+          奖励工资
+          <input type="text" name="bonus_salary" id="bonus_salary" readonly="readonly">
+        </p>
+        <p>
+          罚款
+          <input type="text" name="penalty_salary" id="penalty_salary" readonly="readonly">
+        </p>
+        <p>
+          <font style="color:red">总工资</font>
+          <input type="text" name="total_salary" id="total_salary" readonly="readonly">
+        </p>
+	</div>
+
+	<a href="./employees" class="back-to-home">返回主页</a>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/Showemployees.js"></script>
+</body>
+</html>

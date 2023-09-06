@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>当前订单</title>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/CurrentOrder.css">
+</head>
+<body>
+    <div class="container">
+        <h1>已点菜</h1>
+        <table class="order-table">
+            <tr>
+                <th>编号</th>
+                <th>菜名</th>
+                <th>价格</th>
+            </tr>
+            <tbody id="order-items"></tbody>
+        </table>
+        <p>
+            请输入服务的员工ID
+            <input type="text" id="employee-id-input" name="employee_id" placeholder="员工ID">
+        </p>
+        <p>
+            评价
+            <select id="feedback-input" name="feedback" style="padding:0.2em;border-radius:2px;">
+                <option value="满意">满意</option>
+                <option value="基本满意">基本满意</option>
+                <option value="一般">一般</option>
+                <option value="差">差</option>
+            </select>
+        </p>
+        </p>
+        <form action="/ChooseMenu">
+            <input type="submit" value="加菜" class="action-button">
+        </form>
+        <form id="confirm-button" action="/customers">
+            <input type="submit" value="确认" class="action-button">
+        </form>
+    </div>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/CurrentOrder.js"></script>
+</body>
+</html>

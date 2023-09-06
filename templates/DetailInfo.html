@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>员工工资管理</title>
+  <link rel="stylesheet" href="/static/CSS/DetailInfo.css">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/DetailInfo.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>工资展示</h1>
+    <div class="table-container">
+      <table id="employee-table">
+        <tr>
+          <th>编号</th>
+          <th>姓名</th>
+          <th>职位</th>
+          <th>基础工资</th>
+          <th>员工绩效</th>
+          <th>奖励工资</th>
+          <th>罚款</th>
+          <th>员工总工资</th>
+          <th>罚款提交</th>
+        </tr>
+          <tbody id="employee-table-body"></tbody>
+      </table>
+    </div>
+    <h1>账单历史统计</h1>
+    <p>查询日期</p>
+    <input type="date" name="date" id="date">
+    <p>查询id</p>
+    <input type="text" name="employee" placeholder="输入员工ID">
+    <p>下单次数</p>
+    <input type="text" name="times" readonly="readonly">
+    <p>消费总额</p>
+    <input type="text" name="money" readonly="readonly">
+    <button type="button" id="searchBtn">查询</button>
+
+    <h1>注册员工账号</h1>
+    <div class="form-container">
+      <p>员工账号</p>
+      <input type="text" name="employeeId">
+      <p>员工密码</p>
+      <input type="password" name="employeePassword">
+      <p>员工姓名</p>
+      <input type="text" name="employeeName">
+      <p>员工职位</p>
+      <input type="text" name="employeePosition">
+      <p>员工基本工资</p>
+      <input type="text" name="employeeSalary">
+      <input type="reset" value="重置">
+      <input type="submit" value="注册">
+    </div>
+    <a href="/admin">返回主页</a>
+  </div>
+</body>
+</html>

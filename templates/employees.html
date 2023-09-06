@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin:0;
+            background-image: url(../static/img/1.bmp);
+            background-repeat:no-repeat;
+            background-size: cover;
+
+        }
+        .button{
+            background-color:#f66f6a;
+            color:white;
+            width: 400px;
+            height: 60px;
+            border:0;
+            font-size: 16px;
+            box-sizing: content-box;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: #a54b4a;
+        }
+        .text {
+            font: 5em/1 Arial Rounded MT Bold;
+            text-transform: uppercase;
+            fill: none;
+            stroke-width: 3;
+            stroke-linejoin: round;
+            stroke-dasharray: 70 330;
+            stroke-dashoffset: 0;
+            animation: stroke 6s infinite;
+        }
+        .text:nth-child(5n + 1) {
+            stroke: #9fa8da;
+            animation-delay: -1.5s;
+        }
+        .text:nth-child(5n + 2) {
+            stroke: #9fa8da;
+            animation-delay: -3s;
+        }
+        .text:nth-child(5n + 3) {
+            stroke: #7986cb;
+            animation-delay: -4.5s;
+        }
+        .text:nth-child(5n + 4) {
+            stroke: #5c6bc0;
+            animation-delay: -6s;
+        }
+        .text:nth-child(5n + 5) {
+            stroke: #3f51b5;
+            animation-delay: -7.5s;
+        }
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+    </style>
+    <script src="/static/js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 发起AJAX请求
+            $.ajax({
+                url: "/api/employees/info", // API的URL
+                method: "GET",
+                dataType: "json",
+                success: function(response) {
+                    // 请求成功后更新页面内容
+                    var employeeName = response.data.employee_name;
+                    var totalSalary = response.data.total_salary;
+                    // 更新员工姓名和总工资
+                    $("#employeeName").text(employeeName);
+                    $("#totalSalary").text(totalSalary);
+                    // 更新工资输入框的值
+                    $("input[name='money']").val(totalSalary);
+                },
+                error: function(xhr, status, error) {
+                    // 处理请求错误
+                    console.log("AJAX请求发生错误:", error);
+                }
+            });
+        });
+    </script>
+</head>
+<body style="text-align: center">
+    <h1 style="color:blue">早上好，<span id="employeeName"></span>！</h1>
+    <a href="/Billsemployees">
+    <button class="button" >结账管理</button>
+    </a><br><br>
+
+    <form action="/Showemployees" method="get">
+        <button class="button" type="submit" >个人中心</button>
+    </form><br><br>
+    <text>钱不是目标，不是结果，也不是消费品，而是成就事业的工具。</text>
+
+    你的工资为： <input type="text" name="money">
+</body>
+</html>

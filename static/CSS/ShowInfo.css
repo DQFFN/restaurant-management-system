@@ -1,0 +1,116 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.info-table th,
+.info-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-heading {
+  font-size: 18px;
+  color: white;
+}
+
+.info-table td:nth-child(1) {
+  font-weight: bold;
+}
+
+.info-table input[type="text"],
+.info-table input[type="password"] {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.info-table input[readonly] {
+  background-color: #f1f1f1;
+}
+
+.info-table font {
+  vertical-align: middle;
+}
+
+.title {
+  text-align: center;
+  color: darkorange;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.data-display {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.data-item {
+  margin-bottom: 10px;
+}
+
+.data-label {
+  font-size: 16px;
+  color: darkorange;
+  margin-bottom: 5px;
+}
+
+.data-value {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.data-value.orange {
+  color: orange;
+}
+
+.back-to-home {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: orange;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+  background-color: #ff9933;
+}
+
+.action-button {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  padding: 14px 20px;
+  background-color: darkorange;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
